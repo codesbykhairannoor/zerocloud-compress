@@ -3,7 +3,10 @@ import { ref } from 'vue'
 import { Upload, Image as ImageIcon, AlertCircle } from 'lucide-vue-next'
 import { useCompressionStore } from '~/stores/compression'
 import { useFileValidator } from '~/composables/useFileValidator'
+import { useI18n } from 'vue-i18n' // Import hook i18n
 
+// Inisialisasi hook biar bisa dipake di dalam script (buat alert)
+const { t } = useI18n() 
 const store = useCompressionStore()
 const { validate } = useFileValidator()
 const fileInput = ref<HTMLInputElement | null>(null)
@@ -15,14 +18,16 @@ const handleFiles = (files: FileList | File[]) => {
     // 1. Validasi Tipe & Size
     const validation = validate(file)
     if (!validation.valid) {
-      alert(validation.error)
+      // Ganti alert manual jadi translate key
+      alert(t('messages.invalid_file')) 
       continue
     }
 
     // 2. Masukkan ke Store (sekaligus cek limit harian)
     const result = store.addToQueue(file)
     if (!result.success && result.reason === 'limit_reached') {
-      alert("Daily limit reached! Upgrade to Pro for unlimited access.")
+      // Ganti alert manual jadi translate key
+      alert(t('messages.limit_reached'))
       break
     }
   }
@@ -80,16 +85,16 @@ const onDrop = (e: DragEvent) => {
 
         <div>
           <h3 class="text-xl font-semibold text-white">
-            {{ isDragging ? 'Drop it here!' : 'Click or Drag & Drop' }}
+            {{ isDragging ? $t('dropzone.title_dragging') : $t('dropzone.title_idle') }}
           </h3>
           <p class="text-slate-400 mt-1">
-            PNG, JPG, or WebP (Max 20MB per file)
+            {{ $t('dropzone.hint') }}
           </p>
         </div>
 
         <div class="mt-4 flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-[10px] uppercase tracking-widest font-bold text-slate-500 uppercase">
           <AlertCircle class="w-3 h-3" />
-          100% Secure & Local Processing
+          {{ $t('dropzone.secure') }}
         </div>
       </div>
     </div>

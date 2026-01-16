@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Download, Eye, Loader2, CheckCircle2, AlertCircle } from 'lucide-vue-next'
+import { Download, Eye, Loader2, Trash2, AlertCircle } from 'lucide-vue-next'
+import { useCompressionStore } from '~/stores/compression' // Import Store
 import { formatBytes } from '~/utils/format'
 
 const props = defineProps<{
@@ -7,6 +8,7 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['preview'])
+const store = useCompressionStore() // Init Store buat fungsi hapus
 </script>
 
 <template>
@@ -28,20 +30,27 @@ const emit = defineEmits(['preview'])
     </div>
 
     <div class="flex items-center gap-2">
+      
       <div v-if="item.status === 'processing'" class="flex items-center gap-2 text-blue-400 text-xs font-medium bg-blue-500/10 px-3 py-1.5 rounded-full">
         <Loader2 class="w-3 h-3 animate-spin" />
-        Processing...
+        {{ $t('manager.processing') }}
       </div>
 
-    <template>
-  <button 
-    v-if="item.status === 'done'" 
-    @click="$emit('preview', item)" 
-    class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-  >
-    <Eye class="w-5 h-5" />
-  </button>
-  </template>
+      <button 
+        v-if="item.status === 'done'" 
+        @click="$emit('preview', item)" 
+        class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+        :title="$t('preview.comparison')"
+      >
+        <Eye class="w-5 h-5" />
+      </button>
+
+      <button 
+        @click="store.removeItem(item.id)"
+        class="p-2 text-slate-500 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
+      >
+        <Trash2 class="w-5 h-5" />
+      </button>
 
       <div v-if="item.status === 'error'" class="text-red-400">
         <AlertCircle class="w-5 h-5" />

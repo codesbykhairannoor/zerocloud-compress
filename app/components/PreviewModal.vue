@@ -13,14 +13,12 @@ const emit = defineEmits(['close'])
 const sliderPos = ref(50) // Posisi garis tengah (50%)
 const compressedUrl = ref('')
 
-// Buat URL dari Blob hasil kompresi agar bisa ditampilkan di <img>
 onMounted(() => {
   if (props.item.compressed) {
     compressedUrl.value = URL.createObjectURL(props.item.compressed)
   }
 })
 
-// Hapus URL saat modal ditutup biar gak makan RAM
 onUnmounted(() => {
   if (compressedUrl.value) URL.revokeObjectURL(compressedUrl.value)
 })
@@ -42,7 +40,7 @@ const handleInput = (e: Event) => {
             {{ item.file.name }}
           </h3>
           <span class="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded-full font-mono">
-            Preview Comparison
+            {{ $t('preview.comparison') }}
           </span>
         </div>
         <button @click="$emit('close')" class="p-2 hover:bg-slate-800 rounded-full text-slate-400 transition-colors">
@@ -53,14 +51,18 @@ const handleInput = (e: Event) => {
       <div class="relative aspect-video w-full bg-black flex items-center justify-center overflow-hidden">
         
         <img :src="item.preview" class="absolute inset-0 w-full h-full object-contain" />
-        <div class="absolute top-4 left-4 z-10 bg-black/50 backdrop-blur-md text-[10px] text-white px-2 py-1 rounded uppercase tracking-widest font-bold">Original</div>
+        <div class="absolute top-4 left-4 z-10 bg-black/50 backdrop-blur-md text-[10px] text-white px-2 py-1 rounded uppercase tracking-widest font-bold">
+          {{ $t('preview.original') }}
+        </div>
 
         <div 
           class="absolute inset-0 w-full h-full pointer-events-none"
           :style="{ clipPath: `inset(0 0 0 ${sliderPos}%)` }"
         >
           <img :src="compressedUrl" class="absolute inset-0 w-full h-full object-contain" />
-          <div class="absolute top-4 right-4 z-10 bg-blue-600/80 backdrop-blur-md text-[10px] text-white px-2 py-1 rounded uppercase tracking-widest font-bold">Compressed</div>
+          <div class="absolute top-4 right-4 z-10 bg-blue-600/80 backdrop-blur-md text-[10px] text-white px-2 py-1 rounded uppercase tracking-widest font-bold">
+            {{ $t('preview.compressed') }}
+          </div>
         </div>
 
         <input 
@@ -84,11 +86,11 @@ const handleInput = (e: Event) => {
 
       <div class="p-6 grid grid-cols-2 gap-4 bg-slate-900">
         <div class="space-y-1">
-          <p class="text-slate-500 text-xs uppercase tracking-wider font-bold">Size Before</p>
+          <p class="text-slate-500 text-xs uppercase tracking-wider font-bold">{{ $t('preview.size_before') }}</p>
           <p class="text-xl text-white font-semibold">{{ formatBytes(item.originalSize) }}</p>
         </div>
         <div class="space-y-1 text-right">
-          <p class="text-slate-500 text-xs uppercase tracking-wider font-bold">Size After</p>
+          <p class="text-slate-500 text-xs uppercase tracking-wider font-bold">{{ $t('preview.size_after') }}</p>
           <p class="text-xl text-emerald-400 font-bold">
             {{ formatBytes(item.compressedSize) }}
             <span class="text-sm font-normal ml-1">(-{{ Math.round((1 - item.compressedSize / item.originalSize) * 100) }}%)</span>
@@ -100,7 +102,6 @@ const handleInput = (e: Event) => {
 </template>
 
 <style scoped>
-/* Styling khusus slider biar smooth */
 input[type="range"]::-webkit-slider-thumb {
   width: 2px;
 }

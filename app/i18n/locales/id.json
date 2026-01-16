@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "limit": "Batas Harian:",
+    "used": "Terpakai",
+    "go_pro": "Go Pro"
+  },
+  "hero": {
+    "title": "Kompres Gambar.",
+    "subtitle": "Bukan Privasi.",
+    "description": "Tanpa upload ke server. Tanpa koleksi data.",
+    "highlight": "100% Pemrosesan di sisi Client."
+  },
+  "dropzone": {
+    "title_idle": "Klik atau Seret & Lepas",
+    "title_dragging": "Lepaskan di sini!",
+    "hint": "PNG, JPG, atau WebP (Maks 20MB per file)",
+    "secure": "100% Aman & Pemrosesan Lokal"
+  },
+  "manager": {
+    "queue": "Antrean",
+    "clear_all": "Hapus Semua",
+    "quality": "Kualitas Kompresi:",
+    "process": "Proses",
+    "processing": "Memproses...",
+    "download_zip": "Unduh Semua (ZIP)"
+  },
+  "preview": {
+    "comparison": "Perbandingan Preview",
+    "original": "Asli",
+    "compressed": "Hasil Kompres",
+    "size_before": "Ukuran Sebelum",
+    "size_after": "Ukuran Sesudah"
+  },
+  "messages": {
+    "limit_reached": "Batas harian tercapai! Upgrade ke Pro untuk akses tak terbatas.",
+    "invalid_file": "File tidak valid atau terlalu besar."
+  }
+}
