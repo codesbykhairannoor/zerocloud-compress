@@ -20,7 +20,7 @@ export const useCompressionStore = defineStore('compression', {
     userStatus: 'free', 
     dailyUsage: 0,
     isComingSoon: true,
-    maxDailyLimit: 30, 
+    maxDailyLimit: 5, 
     isProcessing: false
   }),
 
@@ -41,7 +41,7 @@ export const useCompressionStore = defineStore('compression', {
         const today = new Date().toDateString()
         const storedDate = localStorage.getItem('zc_last_date')
         const storedUsage = localStorage.getItem('zc_usage')
-        this.maxDailyLimit = 30
+        this.maxDailyLimit = 5
 
         if (storedDate !== today) {
           this.dailyUsage = 0
