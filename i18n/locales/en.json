@@ -1,0 +1,73 @@
+{
+ "nav": {
+    "limit": "Daily Limit:",
+    "used": "Used",
+    "go_pro": "Go Pro"
+  },
+  "hero": {
+    "title": "Compress Images.",
+    "subtitle": "Without Sacrificing Privacy.",
+    "description": "No server uploads. No data collection.",
+    "highlight": "100% Processing in Your Browser."
+  },
+  "features": {
+    "privacy_title": "Total Privacy",
+    "privacy_desc": "Your files never leave this device. No servers peeking at your data.",
+    "speed_title": "Instant & Fast",
+    "speed_desc": "No waiting for uploads or downloads. Compression happens instantly.",
+    "quality_title": "Sharp Quality",
+    "quality_desc": "Smart algorithms reduce file size without destroying image details."
+  },
+  "dropzone": {
+    "title_idle": "Click or Drag & Drop",
+    "title_dragging": "Drop it here!",
+    "hint": "PNG, JPG, or WebP (Max 20MB per file)",
+    "secure": "100% Secure & Local Processing"
+  },
+  "manager": {
+    "queue": "Queue",
+    "clear_all": "Clear All",
+    "quality": "Compression Quality:",
+    "process": "Process",
+    "processing": "Processing...",
+    "download_zip": "Download All (ZIP)"
+  },
+  "preview": {
+    "comparison": "Preview Comparison",
+    "original": "Original",
+    "compressed": "Compressed",
+    "size_before": "Size Before",
+    "size_after": "Size After"
+  },
+
+  
+  "messages": {
+    "limit_reached": "Daily limit reached! Upgrade to Pro for unlimited access.",
+    "invalid_file": "Invalid file or file too large."
+  },
+  "how_it_works": {
+    "title": "Under the Hood",
+    "step1_title": "Local Processing",
+    "step1_desc": "We use WebAssembly to run compression logic directly in your browser. No data travels to our servers.",
+    "step2_title": "Smart Optimization",
+    "step2_desc": "Your images are analyzed and optimized using industry-standard codecs without losing visual clarity.",
+    "step3_title": "Instant Result",
+    "step3_desc": "Once finished, the optimized file is saved straight to your downloads folder automatically."
+},
+"compatibility": {
+    "title": "Works Everywhere",
+    "browser_title": "Modern Browsers",
+    "browser_desc": "Full support for Chrome, Firefox, Edge, and Safari. No plugins required.",
+    "device_title": "Any Device",
+    "device_desc": "Optimized for Desktop, Tablet, and Mobile. Process images on the go.",
+    "offline_title": "Offline Mode",
+    "offline_desc": "After the first load, this app works even without an internet connection."
+},
+
+"stats": {
+  "security_title": "Enterprise Grade Security",
+  "security_tag": "Private by Design",
+  "security_desc": "By moving the logic to your browser, we eliminate 100% of data breach risks. No upload = No leak.",
+  "tech_label": "Powered by WebAssembly"
+}
+}

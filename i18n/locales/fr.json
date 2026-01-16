@@ -1,0 +1,57 @@
+{
+  "nav": { "limit": "Limite Quotidienne :", "used": "Utilisé", "go_pro": "Passer Pro" },
+  "hero": {
+    "title": "Compressez vos Images.",
+    "subtitle": "Sans Sacrifier votre Vie Privée.",
+    "description": "Aucun téléchargement sur serveur. Aucune collecte de données.",
+    "highlight": "Traitement 100% Local dans votre Navigateur."
+  },
+  "features": {
+    "privacy_title": "Confidentialité Totale",
+    "privacy_desc": "Vos fichiers ne quittent jamais cet appareil. Aucun serveur ne consulte vos données.",
+    "speed_title": "Rapide & Instantané",
+    "speed_desc": "Pas d'attente d'envoi ou de réception. La compression est instantanée.",
+    "quality_title": "Qualité Précise",
+    "quality_desc": "Des algorithmes intelligents réduisent la taille sans détruire les détails de l'image."
+  },
+  "dropzone": {
+    "title_idle": "Cliquez ou Glissez-Déposez",
+    "title_dragging": "Déposez ici !",
+    "hint": "PNG, JPG ou WebP (Max 20 Mo par fichier)",
+    "secure": "Traitement Local 100% Sécurisé"
+  },
+  "manager": {
+    "queue": "File d'attente",
+    "clear_all": "Tout Effacer",
+    "quality": "Qualité de Compression :",
+    "process": "Compresser",
+    "processing": "Traitement...",
+    "download_zip": "Tout Télécharger (ZIP)"
+  },
+  "preview": { "comparison": "Comparaison Aperçu", "original": "Original", "compressed": "Compressé", "size_before": "Taille Avant", "size_after": "Taille Après" },
+  "messages": { "limit_reached": "Limite quotidienne atteinte ! Passez à Pro pour un accès illimité.", "invalid_file": "Fichier invalide ou trop volumineux." },
+  "how_it_works": {
+    "title": "Fonctionnement",
+    "step1_title": "Traitement Local",
+    "step1_desc": "Nous utilisons WebAssembly pour exécuter la compression directement dans votre navigateur.",
+    "step2_title": "Optimisation Intelligente",
+    "step2_desc": "Vos images sont optimisées via des codecs standards sans perte de clarté visuelle.",
+    "step3_title": "Résultat Instantané",
+    "step3_desc": "Une fois terminé, le fichier optimisé est enregistré directement dans vos téléchargements."
+  },
+  "compatibility": {
+    "title": "Partout avec Vous",
+    "browser_title": "Navigateurs Modernes",
+    "browser_desc": "Support complet pour Chrome, Firefox, Edge et Safari. Aucun plugin requis.",
+    "device_title": "Tout Appareil",
+    "device_desc": "Optimisé pour bureau, tablette et mobile. Compressez où que vous soyez.",
+    "offline_title": "Mode Hors-ligne",
+    "offline_desc": "Après le premier chargement, l'app fonctionne sans connexion internet."
+  },
+  "stats": {
+    "security_title": "Sécurité de Niveau Entreprise",
+    "security_tag": "Privé par Conception",
+    "security_desc": "En déplaçant la logique sur votre navigateur, nous éliminons 100% des risques de fuite. Pas d'upload = Pas de fuite.",
+    "tech_label": "Propulsé par WebAssembly"
+  }
+}

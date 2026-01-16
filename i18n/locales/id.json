@@ -1,0 +1,71 @@
+{
+ "nav": {
+    "limit": "Batas Harian:",
+    "used": "Terpakai",
+    "go_pro": "Go Pro"
+  },
+  "hero": {
+    "title": "Kompres Gambar.",
+    "subtitle": "Tanpa Mengorbankan Privasi.",
+    "description": "Tanpa upload ke server. Tanpa koleksi data.",
+    "highlight": "100% Pemrosesan di Browser Anda."
+  },
+  "features": {
+    "privacy_title": "Privasi Total",
+    "privacy_desc": "File Anda tidak pernah meninggalkan perangkat ini. Tidak ada server yang mengintip.",
+    "speed_title": "Instan & Cepat",
+    "speed_desc": "Tidak perlu menunggu upload atau download. Kompresi terjadi seketika.",
+    "quality_title": "Kualitas Tajam",
+    "quality_desc": "Algoritma cerdas mengecilkan ukuran file tanpa merusak detail gambar."
+  },
+  "dropzone": {
+    "title_idle": "Klik atau Seret & Lepas",
+    "title_dragging": "Lepaskan di sini!",
+    "hint": "PNG, JPG, atau WebP (Maks 20MB per file)",
+    "secure": "100% Aman & Pemrosesan Lokal"
+  },
+  "manager": {
+    "queue": "Antrean",
+    "clear_all": "Hapus Semua",
+    "quality": "Kualitas Kompresi:",
+    "process": "Proses",
+    "processing": "Memproses...",
+    "download_zip": "Unduh Semua (ZIP)"
+  },
+  "preview": {
+    "comparison": "Perbandingan Preview",
+    "original": "Asli",
+    "compressed": "Hasil Kompres",
+    "size_before": "Ukuran Sebelum",
+    "size_after": "Ukuran Sesudah"
+  },
+  "messages": {
+    "limit_reached": "Batas harian tercapai! Upgrade ke Pro untuk akses tak terbatas.",
+    "invalid_file": "File tidak valid atau terlalu besar."
+  },
+
+  "how_it_works": {
+    "title": "Cara Kerja Sistem",
+    "step1_title": "Pemrosesan Lokal",
+    "step1_desc": "Kami menggunakan WebAssembly untuk menjalankan logika kompresi langsung di browser Anda. Tidak ada data yang dikirim ke server kami.",
+    "step2_title": "Optimasi Cerdas",
+    "step2_desc": "Gambar Anda dianalisis dan dioptimalkan menggunakan codec standar industri tanpa merusak kejernihan visual.",
+    "step3_title": "Hasil Instan",
+    "step3_desc": "Setelah selesai, file yang telah dioptimalkan akan langsung tersimpan ke folder unduhan Anda secara otomatis."
+},
+"compatibility": {
+    "title": "Bisa Diakses Di Mana Saja",
+    "browser_title": "Browser Modern",
+    "browser_desc": "Dukungan penuh untuk Chrome, Firefox, Edge, dan Safari. Tanpa perlu install plugin tambahan.",
+    "device_title": "Semua Perangkat",
+    "device_desc": "Dioptimalkan untuk Desktop, Tablet, dan Mobile. Kompres gambar kapan saja dan di mana saja.",
+    "offline_title": "Mode Offline",
+    "offline_desc": "Setelah pemuatan pertama, aplikasi ini tetap bisa digunakan meskipun tanpa koneksi internet."
+},
+"stats": {
+    "security_title": "Keamanan Kelas Enterprise",
+    "security_tag": "Privasi Sejak Awal",
+    "security_desc": "Dengan memindahkan logika ke browser Anda, kami mengeliminasi 100% risiko kebocoran data. Tanpa upload = Tanpa kebocoran.",
+    "tech_label": "Ditenagai oleh WebAssembly"
+}
+}

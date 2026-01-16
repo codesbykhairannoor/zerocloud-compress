@@ -1,0 +1,57 @@
+{
+  "nav": { "limit": "每日限制:", "used": "已使用", "go_pro": "升级 Pro" },
+  "hero": {
+    "title": "压缩图片",
+    "subtitle": "无需牺牲隐私",
+    "description": "无需上传服务器，不收集任何数据。",
+    "highlight": "100% 在您的浏览器中处理。"
+  },
+  "features": {
+    "privacy_title": "绝对隐私",
+    "privacy_desc": "文件永远不会离开您的设备，服务器无法查看您的数据。",
+    "speed_title": "极速响应",
+    "speed_desc": "无需等待上传或下载，即刻完成压缩。",
+    "quality_title": "高清质量",
+    "quality_desc": "智能算法在减小文件体积的同时，保留图像细节。"
+  },
+  "dropzone": {
+    "title_idle": "点击或拖拽文件至此",
+    "title_dragging": "松开鼠标！",
+    "hint": "支持 PNG, JPG 或 WebP (单个文件最大 20MB)",
+    "secure": "100% 安全且本地处理"
+  },
+  "manager": {
+    "queue": "队列",
+    "clear_all": "清除全部",
+    "quality": "压缩质量:",
+    "process": "开始处理",
+    "processing": "处理中...",
+    "download_zip": "下载全部 (ZIP)"
+  },
+  "preview": { "comparison": "预览对比", "original": "原图", "compressed": "压缩后", "size_before": "原体积", "size_after": "新体积" },
+  "messages": { "limit_reached": "已达到每日限制！升级 Pro 以获取无限访问权限。", "invalid_file": "文件无效或体积过大。" },
+  "how_it_works": {
+    "title": "技术原理",
+    "step1_title": "本地处理",
+    "step1_desc": "我们使用 WebAssembly 直接在您的浏览器中运行压缩逻辑，数据不会发送到服务器。",
+    "step2_title": "智能优化",
+    "step2_desc": "使用行业标准编解码器分析并优化图像，确保视觉清晰度。",
+    "step3_title": "即时结果",
+    "step3_desc": "处理完成后，优化后的文件会自动保存到您的下载文件夹。"
+  },
+  "compatibility": {
+    "title": "多端兼容",
+    "browser_title": "现代浏览器",
+    "browser_desc": "全面支持 Chrome, Firefox, Edge 和 Safari，无需插件。",
+    "device_title": "任何设备",
+    "device_desc": "适配桌面、平板和移动端，随时随地处理图片。",
+    "offline_title": "离线模式",
+    "offline_desc": "首次加载后，即使没有网络也能正常运行。"
+  },
+  "stats": {
+    "security_title": "企业级安全",
+    "security_tag": "原生隐私设计",
+    "security_desc": "通过将逻辑移至浏览器，我们消除了 100% 的泄露风险。无需上传 = 零泄露。",
+    "tech_label": "由 WebAssembly 驱动"
+  }
+}

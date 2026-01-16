@@ -1,0 +1,57 @@
+{
+  "nav": { "limit": "Límite Diario:", "used": "Usado", "go_pro": "Hazte Pro" },
+  "hero": {
+    "title": "Comprime Imágenes.",
+    "subtitle": "Sin Sacrificar tu Privacidad.",
+    "description": "Sin subidas al servidor. Sin recolección de datos.",
+    "highlight": "Procesamiento 100% en tu Navegador."
+  },
+  "features": {
+    "privacy_title": "Privacidad Total",
+    "privacy_desc": "Tus archivos nunca salen de este dispositivo. Sin servidores vigilando tus datos.",
+    "speed_title": "Rápido e Instantáneo",
+    "speed_desc": "Sin esperas de carga o descarga. La compresión ocurre al instante.",
+    "quality_title": "Calidad Nítida",
+    "quality_desc": "Algoritmos inteligentes reducen el tamaño sin destruir los detalles de la imagen."
+  },
+  "dropzone": {
+    "title_idle": "Haz clic o Arrastra y Suelta",
+    "title_dragging": "¡Suéltalo aquí!",
+    "hint": "PNG, JPG o WebP (Máx. 20MB por archivo)",
+    "secure": "Procesamiento Local 100% Seguro"
+  },
+  "manager": {
+    "queue": "Cola",
+    "clear_all": "Limpiar Todo",
+    "quality": "Calidad de Compresión:",
+    "process": "Procesar",
+    "processing": "Procesando...",
+    "download_zip": "Descargar Todo (ZIP)"
+  },
+  "preview": { "comparison": "Comparación de Vista Previa", "original": "Original", "compressed": "Comprimido", "size_before": "Tamaño Antes", "size_after": "Tamaño Después" },
+  "messages": { "limit_reached": "¡Límite diario alcanzado! Pásate a Pro para acceso ilimitado.", "invalid_file": "Archivo inválido o demasiado grande." },
+  "how_it_works": {
+    "title": "Bajo el Capó",
+    "step1_title": "Procesamiento Local",
+    "step1_desc": "Usamos WebAssembly para ejecutar la compresión directamente en tu navegador. Nada viaja a nuestros servidores.",
+    "step2_title": "Optimización Inteligente",
+    "step2_desc": "Tus imágenes se optimizan usando códecs estándar de la industria sin perder claridad visual.",
+    "step3_title": "Resultado Instante",
+    "step3_desc": "Al finalizar, el archivo se guarda automáticamente en tu carpeta de descargas."
+  },
+  "compatibility": {
+    "title": "Funciona en Todas Partes",
+    "browser_title": "Navegadores Modernos",
+    "browser_desc": "Soporte total para Chrome, Firefox, Edge y Safari. Sin plugins.",
+    "device_title": "Cualquier Dispositivo",
+    "device_desc": "Optimizado para escritorio, tablet y móvil. Procesa imágenes sobre la marcha.",
+    "offline_title": "Modo Offline",
+    "offline_desc": "Tras la primera carga, esta app funciona incluso sin conexión a internet."
+  },
+  "stats": {
+    "security_title": "Seguridad de Nivel Empresarial",
+    "security_tag": "Privacidad por Diseño",
+    "security_desc": "Al mover la lógica a tu navegador, eliminamos el 100% de los riesgos de fuga. Sin subida = Sin filtración.",
+    "tech_label": "Potenciado por WebAssembly"
+  }
+}
