@@ -29,7 +29,7 @@
     "download_zip": "下载全部 (ZIP)"
   },
   "preview": { "comparison": "预览对比", "original": "原图", "compressed": "压缩后", "size_before": "原体积", "size_after": "新体积" },
-  "messages": { "limit_reached": "已达到每日限制！升级 Pro 以获取无限访问权限。", "invalid_file": "文件无效或体积过大。" },
+  "messages": { "limit_reached": "已达到每日限制！升级 Pro 以获取无限访问权限。", "invalid_file": "文件无效或体积过大。", "coming_soon": "Pro 功能即将推出！我们正为您努力开发中。" },
   "how_it_works": {
     "title": "技术原理",
     "step1_title": "本地处理",

@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useCompressionStore } from '~/stores/compression'
 import { useI18n } from 'vue-i18n'
-import { Zap, ShieldCheck, Globe, ChevronDown, Check } from 'lucide-vue-next'
+import { Zap, ShieldCheck, Globe, ChevronDown, Check, Clock } from 'lucide-vue-next'
 
 const store = useCompressionStore()
 const { locale, setLocale } = useI18n()
@@ -69,12 +69,23 @@ onUnmounted(() => {
           </div>
         </ClientOnly>
 
-        <button v-if="store.userStatus === 'free'"
-          @click="store.upgradeToPro()" 
-          class="flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all shadow-lg shadow-orange-500/20 active:scale-95">
-          <Zap class="w-4 h-4 fill-white" />
-          <span>{{ $t('nav.go_pro') }}</span>
-        </button>
+       <button 
+  v-if="store.userStatus === 'free'"
+  @click="store.upgradeToPro()" 
+  :class="[
+    'flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-lg transition-all active:scale-95',
+    store.isComingSoon 
+      ? 'bg-slate-800 text-slate-400 cursor-not-allowed border border-slate-700' 
+      : 'bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white shadow-lg shadow-orange-500/20'
+  ]"
+>
+  <Zap v-if="!store.isComingSoon" class="w-4 h-4 fill-white" />
+  <Clock v-else class="w-4 h-4 animate-spin" />
+
+  <span>
+    {{ store.isComingSoon ? $t('messages.coming_soon') : $t('nav.go_pro') }}
+  </span>
+</button>
 
         <div class="relative" ref="dropdownRef">
           <button 

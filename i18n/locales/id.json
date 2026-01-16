@@ -41,7 +41,10 @@
   },
   "messages": {
     "limit_reached": "Batas harian tercapai! Upgrade ke Pro untuk akses tak terbatas.",
-    "invalid_file": "File tidak valid atau terlalu besar."
+    "invalid_file": "File tidak valid atau terlalu besar.",
+    
+    "coming_soon": "Fitur Pro akan segera hadir! Kami sedang mengerjakannya untuk Anda."
+
   },
 
   "how_it_works": {
@@ -62,6 +65,7 @@
     "offline_title": "Mode Offline",
     "offline_desc": "Setelah pemuatan pertama, aplikasi ini tetap bisa digunakan meskipun tanpa koneksi internet."
 },
+
 "stats": {
     "security_title": "Keamanan Kelas Enterprise",
     "security_tag": "Privasi Sejak Awal",

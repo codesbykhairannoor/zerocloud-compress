@@ -29,7 +29,7 @@
     "download_zip": "Descargar Todo (ZIP)"
   },
   "preview": { "comparison": "Comparación de Vista Previa", "original": "Original", "compressed": "Comprimido", "size_before": "Tamaño Antes", "size_after": "Tamaño Después" },
-  "messages": { "limit_reached": "¡Límite diario alcanzado! Pásate a Pro para acceso ilimitado.", "invalid_file": "Archivo inválido o demasiado grande." },
+  "messages": { "limit_reached": "¡Límite diario alcanzado! Pásate a Pro para acceso ilimitado.", "invalid_file": "Archivo inválido o demasiado grande.","coming_soon": "¡La función Pro llegará pronto! Estamos trabajando en ello para ti." },
   "how_it_works": {
     "title": "Bajo el Capó",
     "step1_title": "Procesamiento Local",

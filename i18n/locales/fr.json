@@ -29,7 +29,7 @@
     "download_zip": "Tout Télécharger (ZIP)"
   },
   "preview": { "comparison": "Comparaison Aperçu", "original": "Original", "compressed": "Compressé", "size_before": "Taille Avant", "size_after": "Taille Après" },
-  "messages": { "limit_reached": "Limite quotidienne atteinte ! Passez à Pro pour un accès illimité.", "invalid_file": "Fichier invalide ou trop volumineux." },
+  "messages": { "limit_reached": "Limite quotidienne atteinte ! Passez à Pro pour un accès illimité.", "invalid_file": "Fichier invalide ou trop volumineux.","coming_soon": "La fonctionnalité Pro arrive bientot ! Nous y travaillons pour vous." },
   "how_it_works": {
     "title": "Fonctionnement",
     "step1_title": "Traitement Local",
