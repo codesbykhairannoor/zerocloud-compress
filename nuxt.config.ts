@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   // Konfigurasi Bahasa
   i18n: {
     lazy: true,
-    langDir: 'locales', // folder di dalam app/locales
+    langDir: './locales', // folder di dalam app/locales
     strategy: 'no_prefix', // Biar URL gak berubah jadi /id atau /en (opsional)
     locales: [
       { code: 'en', file: 'en.json', name: 'English' },
