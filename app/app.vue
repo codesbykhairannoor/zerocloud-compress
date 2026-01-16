@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useCompressionStore } from '~/stores/compression'
-import { ShieldCheck, Zap, Layers } from 'lucide-vue-next' // Import Icon buat section baru
+import { ShieldCheck, Zap, Layers, Cpu } from 'lucide-vue-next' // Import Icon buat section baru
 
 const store = useCompressionStore()
 const selectedItem = ref<any>(null)

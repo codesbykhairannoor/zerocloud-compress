@@ -20,8 +20,7 @@ export const useCompressionStore = defineStore('compression', {
     },
     userStatus: 'free', 
     dailyUsage: 0,
-    // Kita set ke 100 sesuai request testing lu
-    maxDailyLimit: 100, 
+    maxDailyLimit: 30, 
     isProcessing: false
   }),
 
@@ -44,6 +43,7 @@ export const useCompressionStore = defineStore('compression', {
         const today = new Date().toDateString()
         const storedDate = localStorage.getItem('zc_last_date')
         const storedUsage = localStorage.getItem('zc_usage')
+        this.maxDailyLimit = 30
 
         // Jika hari berganti (misal besok buka lagi), jatah reset ke 0
         if (storedDate !== today) {
@@ -54,7 +54,7 @@ export const useCompressionStore = defineStore('compression', {
           // Jika hari yang sama, ambil data pemakaian terakhir
           this.dailyUsage = parseInt(storedUsage || '0')
         }
-        console.log("LOGIC BARU: Limit is", this.maxDailyLimit)
+        console.log("LOGIC NEW: Limit is", this.maxDailyLimit)
       }
     },
 
