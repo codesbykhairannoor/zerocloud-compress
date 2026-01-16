@@ -74,6 +74,11 @@ export const useCompressionStore = defineStore('compression', {
       return { success: true }
     },
 
+    updateSettings(key: 'quality', value: number) {
+      if (key === 'quality') {
+        this.globalSettings.quality = value
+      }
+    },
     // Dipanggil setiap satu foto berhasil dikompres
     incrementUsage() {
       if (this.userStatus === 'free') {

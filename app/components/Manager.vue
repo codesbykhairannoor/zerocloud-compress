@@ -12,8 +12,10 @@ const { t } = useI18n()
 const emit = defineEmits(['show-preview'])
 
 const updateQuality = (e: Event) => {
-  const val = (e.target as HTMLInputElement).value
-  store.updateSettings('quality', parseFloat(val))
+  const target = e.target as HTMLInputElement
+  const val = parseFloat(target.value)
+  // Memanggil action updateSettings di store
+  store.updateSettings('quality', val)
 }
 
 // FUNGSI BARU: Cek limit sebelum eksekusi batch manager
