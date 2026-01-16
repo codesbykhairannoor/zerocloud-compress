@@ -42,7 +42,8 @@
   "messages": {
     "limit_reached": "Batas harian tercapai! Upgrade ke Pro untuk akses tak terbatas.",
     "invalid_file": "File tidak valid atau terlalu besar.",
-    
+    "limit_reached_alert": "Limit harian hampir habis! Sisa kuota Anda hanya {count} foto lagi.",
+    "remaining_quota": "Sisa kuota gratis: {count} foto hari ini.",
     "coming_soon": "Fitur Pro akan segera hadir! Kami sedang mengerjakannya untuk Anda."
 
   },

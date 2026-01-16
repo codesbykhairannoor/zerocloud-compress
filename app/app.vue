@@ -5,6 +5,7 @@ import { ShieldCheck, Zap, Layers, Cpu } from 'lucide-vue-next' // Import Icon b
 
 const store = useCompressionStore()
 const selectedItem = ref<any>(null)
+const { locale } = useI18n()
 const isModalOpen = ref(false)
 
 // Fungsi buka modal preview
@@ -20,7 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-950 flex flex-col font-sans selection:bg-blue-500/30">
+  <div :dir="locale === 'ar' ? 'rtl' : 'ltr'" class="min-h-screen bg-slate-950 flex flex-col font-sans selection:bg-blue-500/30">
     <Navbar />
 
     <main class="flex-1 w-full max-w-5xl mx-auto px-4 py-12 flex flex-col items-center">

@@ -1,18 +1,66 @@
-/* Import Font Inter dari Google Fonts */
+/* Import Font Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+}
 
 body {
   font-family: 'Inter', sans-serif;
-  @apply bg-slate-950 text-slate-200 antialiased; /* Default Dark Mode */
+  @apply bg-slate-950 text-slate-200 antialiased selection:bg-blue-500/30 selection:text-blue-200;
+  overflow-x: hidden;
 }
 
-/* Custom Scrollbar biar estetik */
+/* Handle RTL (Arabic) secara global agar alignment teks tidak berantakan */
+[dir='rtl'] {
+  font-family: 'Inter', sans-serif; /* Atau bisa tambah font khusus Arab jika perlu */
+  text-align: right;
+}
+
+/* Custom Scrollbar Modern & Minimalis */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-slate-900;
+  @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 rounded-full hover:bg-slate-600;
+  @apply bg-slate-800 rounded-full transition-colors duration-300;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}
+
+/* Efek Glow Background (Opsional: taruh di div paling belakang di app.vue) */
+.bg-glow {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 500px;
+  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Card Glassmorphism Effect */
+.glass-card {
+  @apply bg-slate-900/50 border border-slate-800 backdrop-blur-md;
+}
+
+/* Input Range Styling (Slider Quality) biar gak default banget */
+input[type='range'] {
+  @apply accent-blue-500 transition-all cursor-grab active:cursor-grabbing;
+}
+
+/* Hover Animation buat Button/Card */
+.hover-subtle {
+  @apply transition-all duration-300 hover:border-slate-700 hover:bg-slate-900/80;
+}
+
+/* RTL Support for Icons: Membalikkan icon arrow/play jika di mode Arab */
+[dir='rtl'] .lucide-play, 
+[dir='rtl'] .lucide-chevron-right {
+  transform: scaleX(-1);
 }

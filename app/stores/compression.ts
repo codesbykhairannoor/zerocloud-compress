@@ -25,6 +25,16 @@ export const useCompressionStore = defineStore('compression', {
   }),
 
   getters: {
+    remainingLimit(state): number {
+      return Math.max(0, state.maxDailyLimit - state.dailyUsage)
+    },
+    // Fungsi cek: Apakah jumlah item yang akan diproses masuk dalam sisa kuota?
+    canProcess(state) {
+      return (count: number) => {
+        if (state.userStatus === 'pro') return true
+        return state.dailyUsage + count <= state.maxDailyLimit
+      }
+    },
     totalSaved(state) {
       return state.queue.reduce((acc, item) => {
         if (item.status === 'done' && item.compressedSize) {
@@ -41,7 +51,6 @@ export const useCompressionStore = defineStore('compression', {
         const today = new Date().toDateString()
         const storedDate = localStorage.getItem('zc_last_date')
         const storedUsage = localStorage.getItem('zc_usage')
-        this.maxDailyLimit = 5
 
         if (storedDate !== today) {
           this.dailyUsage = 0
@@ -54,10 +63,6 @@ export const useCompressionStore = defineStore('compression', {
     },
 
     addToQueue(file: File) {
-      if (this.userStatus === 'free' && this.dailyUsage >= this.maxDailyLimit) {
-        return { success: false, reason: 'limit_reached' }
-      }
-
       const newItem: ImageItem = {
         id: Date.now() + Math.random().toString(),
         file,
@@ -65,13 +70,18 @@ export const useCompressionStore = defineStore('compression', {
         status: 'idle',
         originalSize: file.size
       }
-
       this.queue.unshift(newItem)
-      this.dailyUsage++
-      if (process.client) {
-        localStorage.setItem('zc_usage', this.dailyUsage.toString())
-      }
       return { success: true }
+    },
+
+    // Dipanggil setiap satu foto berhasil dikompres
+    incrementUsage() {
+      if (this.userStatus === 'free') {
+        this.dailyUsage++
+        if (process.client) {
+          localStorage.setItem('zc_usage', this.dailyUsage.toString())
+        }
+      }
     },
 
     removeItem(id: string) {
@@ -94,17 +104,9 @@ export const useCompressionStore = defineStore('compression', {
       }
     },
 
-    updateSettings(key: 'quality', value: number) {
-      if (key === 'quality') {
-        this.globalSettings.quality = value
-      }
-    },
-
-    // FUNGSI UPGRADE
     upgradeToPro() {
       if (process.client) {
         const { $i18n } = useNuxtApp()
-        // Pastikan key 'messages.coming_soon' ada di file i18n lu
         alert($i18n.t('messages.coming_soon'))
       }
     }

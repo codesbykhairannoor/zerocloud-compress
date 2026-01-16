@@ -44,6 +44,8 @@
   "messages": {
     "limit_reached": "Daily limit reached! Upgrade to Pro for unlimited access.",
     "invalid_file": "Invalid file or file too large.",
+    "limit_reached_alert": "Daily limit reached! You only have {count} photos remaining.",
+    "remaining_quota": "Remaining free quota: {count} photos today.",
     "coming_soon": "Pro feature is coming soon! We are working on it for you."
   },
   "how_it_works": {
